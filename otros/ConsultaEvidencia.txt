@@ -1,0 +1,43 @@
+
+mysql> SELECT id_pacientes, nombres, apellidos, documento, edad, fecha_reporte,id_paises, nombre_pais FROM pacientes, paises WHERE paises.id_paises = pacientes.paises_procedencia;
+Empty set (0.00 sec)
+
+mysql> SELECT id_pacientes, nombres, apellidos, documento, edad, fecha_reporte,id_paises, nombre_pais FROM pacientes, paises WHERE paises.id_paises = 1;
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+| id_pacientes | nombres    | apellidos | documento | edad | fecha_reporte | id_paises | nombre_pais |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+|            1 | creacion12 | gregerg   |  35345345 |   75 | 2020-04-13    |         1 | Afganistán  |
+|            2 | Michaell   | mendoza   |     65757 |   56 | 2020-04-07    |         1 | Afganistán  |
+|            3 | admin      | admin     |     43534 |   34 | 2020-04-05    |         1 | Afganistán  |
+|            4 | dante      | wewe      |     34534 |   17 | 2020-04-13    |         1 | Afganistán  |
+|            5 | ROOT       | TOOR      |  12321312 |   18 | 2020-04-28    |         1 | Afganistán  |
+|            6 | sasuke     | itachi    |       666 |   21 | 2020-05-22    |         1 | Afganistán  |
+|            7 | sasuke     | itachi    |       666 |   21 | 2020-05-22    |         1 | Afganistán  |
+|            8 | DANTE      | MENDOZA   |     12345 |   12 | 2020-04-08    |         1 | Afganistán  |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT id_pacientes, nombres, apellidos, documento, edad, fecha_reporte,id_paises, nombre_pais FROM pacientes, paises WHERE paises.id_paises = 42;
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+| id_pacientes | nombres    | apellidos | documento | edad | fecha_reporte | id_paises | nombre_pais |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+|            1 | creacion12 | gregerg   |  35345345 |   75 | 2020-04-13    |        42 | Colombia    |
+|            2 | Michaell   | mendoza   |     65757 |   56 | 2020-04-07    |        42 | Colombia    |
+|            3 | admin      | admin     |     43534 |   34 | 2020-04-05    |        42 | Colombia    |
+|            4 | dante      | wewe      |     34534 |   17 | 2020-04-13    |        42 | Colombia    |
+|            5 | ROOT       | TOOR      |  12321312 |   18 | 2020-04-28    |        42 | Colombia    |
+|            6 | sasuke     | itachi    |       666 |   21 | 2020-05-22    |        42 | Colombia    |
+|            7 | sasuke     | itachi    |       666 |   21 | 2020-05-22    |        42 | Colombia    |
+|            8 | DANTE      | MENDOZA   |     12345 |   12 | 2020-04-08    |        42 | Colombia    |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT id_pacientes, nombres, apellidos, documento, edad, fecha_reporte,id_paises, nombre_pais FROM pacientes, paises WHERE paises.id_paises = 42 AND id_pacientes = 1;
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+| id_pacientes | nombres    | apellidos | documento | edad | fecha_reporte | id_paises | nombre_pais |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+|            1 | creacion12 | gregerg   |  35345345 |   75 | 2020-04-13    |        42 | Colombia    |
++--------------+------------+-----------+-----------+------+---------------+-----------+-------------+
+1 row in set (0.00 sec)
+
+mysql>

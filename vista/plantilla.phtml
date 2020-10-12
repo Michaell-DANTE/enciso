@@ -1,58 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro</title>
+        <link rel="stylesheet" href="../css/css.css">
+        <script language="javascript" src="../js/js.js"></script>
+    </head>
+    <body>  
+        <div id="borde">
+
+            <form action="../controlador/entrada.php" method="post">
+                
+                <!-- Tipo Documento -->
+                <label id="t_documento">Tipo de documento</label>
+
+                <select id="cuadro_4" name="documento">
+
+                    <option value="0"></option>
+
+                    <?php 
+                        
+                        while( $datosdo = mysqli_fetch_array($query) )
+                        { 
+                    ?> 
+                        <option value="<?php echo $datosdo['id_documento']?>"><?php echo $datosdo['tipo_documento']?></option>
+                    <?php 
+                    
+                        }
+                    
+                    ?>    
+
+                </select>
+                
+                <!-- Pais Procedencia -->
+                <leabel id="pais_p">Pais de Procedencia</leabel>        
+
+                <select id="cuadro_7" name="pais">
+
+                    <option value="0"></option>
+
+                    <?php 
+                    
+                        while( $datoss = mysqli_fetch_array($queryp) )
+                        { 
+                    ?>
+                        <option value="<?php echo $datoss['id_paises']?>"><?php echo $datoss['nombre_pais']?></option>    
+                    <?php  
+                    
+                        }
+
+                    ?>        
+
+                </select> 
+                
+                <!-- Estados -->
+                <leabel id="est">Estado</leabel>        
+
+                <select id="cuadro_11" name="estado">
+
+                    <option value="0"></option>
+
+                    <?php  
+                    
+                        while( $datoses = mysqli_fetch_array($queryde) )
+                        { 
+                    ?>
+
+                        <option value="<?php echo $datoses['id_estados']?>"><?php echo $datoses['estados']?></option>     
+                    <?php 
+                    
+                        }
+                    
+                    ?>        
+
+                </select>
+                
+                <!-- Lugar Atencion -->
+                <leabel id="lugara">Lugar Atención</leabel>          
+
+                <select id="cuadro_12" name="atencion">
+
+                    <option value="0"></option>
+
+                    <?php  
+                        
+                        while( $datosat = mysqli_fetch_array($queryat) )
+                        { 
+                    ?>
+
+                        <option value="<?php echo $datosat['id_lugar']?>"><?php echo $datosat['lugar_atencion']?></option>     
+                    <?php 
+                    
+                        }
+                    
+                    ?> 
+
+                </select>
+
+                <!-- Pais -->
+                <leabel id="pais">Pais</leabel>        
+
+                <select id="cuadro_8" name="paisss" onclick="getData()">
+
+                    <option value="0"></option>
+
+                    <?php 
+                        
+                        while( $dato = mysqli_fetch_array($querypa) )
+                        { 
+                    ?>
+
+                        <option value="<?php echo $dato['nombre_pais']?>"><?php echo $dato['nombre_pais']?></option>
+                    <?php  
+                    
+                        }
+
+                    ?>
+
+                </select>
+
+                <!-- Insertar Datos -->
+                <label id="nombre">Nombres </label><input id="cuadro_1" name="nombre" type="text" placeholder="Nombre"><br><br>
+                <label id="apellido">Apellidos </label><input id="cuadro_2" name="apellido" type="text" placeholder="Apellido"><br><br>
+                <label id="documento">Documento </label><input id="cuadro_3" name="documento" type="number" placeholder="Numero Documento"><br><br>
+                <label id="fecha">Fecha de reporte</label><input id="cuadro_5" name="fecha" type="date"><br><br> 
+                <leabel id="edad">Edad</leabel><input id="cuadro_6" name="edad" min="0" max="100" type="number" placeholder="Edad"><br><br>  
+
+                <input type="submit" id="boton" name="procesar" value="registrar">
+
+                <input type="reset" id="botonn">
+
+            </form>
+
+        </div>
 
 
+        <?php
 
-    <!-- 
-    <leabel id="pais">Pais</leabel>        
+            require_once($contenido);    
 
-    <select id="cuadro_8" name="paisss">
+        ?>
 
-        <option value="0"></option>
-
-        <option value=""></option>
-
-    </select> -->
-
-        <p id="todo"></p>
-
-        <button name="revisa" onclick="sendRequest()">
-            enviar
-        </button>
-
-
-    <script>
-
-            function sendRequest()
-            {
-
-                var theObject = new XMLHttpRequest();
-                theObject.open('POST', '../modelo/pais.php', true);
-                theObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-                theObject.onreadystatechange = function()
-                {
-
-                    document.getElementById('todo').innerHTML = theObject.responseText;
-
-                }
-                theObject.send()
-            }
-
-    </script>
-    
-    
-    <?php
-
-        require_once($contenido);    
-
-    ?>
-
-</body>
+    </body>
 </html>

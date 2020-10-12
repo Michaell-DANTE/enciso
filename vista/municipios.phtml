@@ -1,0 +1,17 @@
+<leabel id="mun">Municipio</leabel>        
+    <select id="cuadro_10" name="municipio">
+        <option value="0"></option>
+            <?php  
+                    
+             while( $datosm = mysqli_fetch_array($querym) )
+                { 
+            ?>
+
+                <option value="<?php echo $datosm['id_municipios']?>"><?php echo $datosm['nombre_municipio']?></option>     
+            <?php 
+                    
+                 }
+                    
+            ?> 
+
+    </select>

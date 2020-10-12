@@ -1,0 +1,23 @@
+<!-- Datos del los departamentos de colombia -->
+
+<leabel id="dep">Departamento</leabel>        
+
+<select id="cuadro_9" name="departamento">
+
+    <option value="0"></option>
+
+    <?php  
+    while( $datosd = mysqli_fetch_array($queryd) )
+    { 
+    ?>
+        <option id="depp" value="<?php echo $datosd['id_departamentos']?>"><?php echo $datosd['nombre_departamentos']?></option>     
+    <?php 
+    
+    }
+    
+    ?> 
+
+</select>
+
+
+

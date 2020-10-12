@@ -1,0 +1,245 @@
+#cuadro_1
+{
+
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+}
+
+#cuadro_2
+{
+
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+}
+
+#cuadro_3
+{
+
+    position: absolute;
+    top: 40%;
+    left: 20%;
+
+}
+
+#cuadro_4
+{
+
+    position: absolute;
+    top: 30%;
+    left: 20%;
+
+}
+
+#cuadro_5
+{
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+
+}
+
+#cuadro_6
+{
+
+    position: absolute;
+    top: 60%;
+    left: 20%;
+
+}
+
+#cuadro_7
+{
+
+    position: absolute;
+    top: 20%;
+    left: 56%;
+
+}
+
+#cuadro_8
+{
+
+    position: absolute;
+    top: 30%;
+    left: 56%;
+
+}
+
+#cuadro_9
+{
+
+    position: absolute;
+    top: 40%;
+    left: 56%;
+
+}
+
+#cuadro_10
+{
+
+    position: absolute;
+    top: 50%;
+    left: 56%;
+
+}
+
+#cuadro_11
+{
+
+    position: absolute;
+    top: 10%;
+    left: 56%;
+
+}
+
+#cuadro_12
+{
+
+    position: absolute;
+    top: 60%;
+    left: 56%;
+
+}
+
+#nombre
+{
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+}
+
+#apellido
+{
+
+    position: absolute;
+    top: 20%;
+    left: 10%;
+
+}
+
+#documento
+{
+
+    position: absolute;
+    top: 40%;
+    left: 10%;
+
+}
+
+#t_documento
+{
+
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+}
+
+#fecha
+{
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+}
+
+#edad
+{
+
+    position: absolute;
+    top: 60%;
+    left: 10%;
+
+}
+
+#pais_p
+{
+
+    position: absolute;
+    top: 20%;
+    left: 45%;
+
+}
+
+#pais
+{
+
+    position: absolute;
+    top: 30%;
+    left: 45%;
+
+}
+
+#dep
+{
+
+    position: absolute;
+    top: 40%;
+    left: 45%;
+
+}
+
+#mun
+{
+
+    position: absolute;
+    top: 50%;
+    left: 45%;
+
+}
+
+#est
+{
+
+    position: absolute;
+    top: 10%;
+    left: 45%;
+
+}
+
+#lugara
+{
+
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    
+}
+
+#borde
+{
+
+    border: solid 3px black;
+    padding: 14%;
+    
+}
+
+
+#boton
+{
+
+    position: absolute;
+    top: 75%;
+    left: 50%;
+
+}
+
+
+#botonn
+{
+
+    position: absolute;
+    top: 75%;
+    left: 40%;
+
+}
+
+
