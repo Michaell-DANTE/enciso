@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <!-- 
+    <leabel id="pais">Pais</leabel>        
+
+    <select id="cuadro_8" name="paisss">
+
+        <option value="0"></option>
+
+        <option value=""></option>
+
+    </select> -->
+
+        <p id="todo"></p>
+
+        <button name="revisa" onclick="sendRequest()">
+            enviar
+        </button>
+
+
+    <script>
+
+            function sendRequest()
+            {
+
+                var theObject = new XMLHttpRequest();
+                theObject.open('POST', '../modelo/pais.php', true);
+                theObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                theObject.onreadystatechange = function()
+                {
+
+                    document.getElementById('todo').innerHTML = theObject.responseText;
+
+                }
+                theObject.send()
+            }
+
+    </script>
+    
+    
+    <?php
+
+        require_once($contenido);    
+
+    ?>
+
+</body>
+</html>
